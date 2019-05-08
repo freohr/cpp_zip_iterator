@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include "lib/zip_iterator.h"
+#include "lib/zip_range.h"
 
 int main() {
     using utils::zip_iterator;
@@ -19,7 +20,12 @@ int main() {
                 std::cout << std::get<0>(tuple) << std::get<1>(tuple) << std::get<2>(tuple) << std::endl;
             });
 
-//    auto zip_result = *zip_itr;
+	auto zip_range = utils::make_zip_range(intList, charList);
+
+	for (auto values : zip_range)
+	{
+		std::cout << std::get<0>(values) << std::get<1>(values) << std::endl;
+	}
 
     std::cout << "Stuff" << std::endl;
 

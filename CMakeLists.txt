@@ -3,4 +3,4 @@ project(zip_iterator)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(zip_iterator main.cpp lib/zip_iterator.h)
+add_executable(zip_iterator main.cpp lib/zip_iterator.h lib/zip_range.h)
